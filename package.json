@@ -1,17 +1,29 @@
 {
   "name": "solid-hot-toast",
-  "version": "2.4.1-beta",
+  "version": "2.4.1",
   "type": "module",
   "license": "MIT",
   "main": "dist/index.js",
-  "types": "types/index.d.ts",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    },
+    "./headless": {
+      "types": "./headless/index.d.ts",
+      "require": "./headless/index.js"
+    }
+  },
   "homepage": "https://github.com/solid-component/solid-hot-toast",
   "repository": {
     "type": "git",
     "url": "https://github.com/solid-component/solid-hot-toast"
-  },  
+  },
   "files": [
     "dist",
+    "headless",
     "package.json",
     "README.md",
     "types"
